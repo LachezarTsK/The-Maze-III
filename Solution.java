@@ -69,6 +69,7 @@ public class Solution {
                     Point nextPoint = new Point(nextRow, nextColumn);
                     nextPoint.path.append(point.path).append(getDirectionLetter(move));
                     nextPoint.distanceFromStart = point.distanceFromStart + distanceForRolledOverPoints;
+                    
                     minDistance[nextRow][nextColumn] = nextPoint.distanceFromStart;
                     minHeap.add(nextPoint);
                 }
