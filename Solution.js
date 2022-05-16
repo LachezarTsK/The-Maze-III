@@ -60,6 +60,7 @@ function dijkstraSearch(maze) {
                 let nextPoint = new Point(nextRow, nextColumn);
                 nextPoint.path = point.path + getDirectionLetter(move);
                 nextPoint.distanceFromStart = point.distanceFromStart + distanceForRolledOverPoints;
+                
                 minDistance[nextRow][nextColumn] = nextPoint.distanceFromStart;
                 minHeap.enqueue(nextPoint);
             }
